@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--<link rel="stylesheet" href="style.css" />-->
+    <script src="script.js" defer></script>
+    <title>WD101 L-8 assignment</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    background-color: hsl(180, 52%, 63%)
+  }
+  
+  .heading {
+    color: azure;
+    margin-top: 1rem;
+    font-family: serif;
+    font-size: 50px;
+    font-weight: 1500;
+  }
+  
+  .subheading {
+    color: azure;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style:italic;
+  }
+  
+  .label2 {
+    color: azure;
+  }
+  
+  .actual {
+    background-color:  hsl(180, 52%, 63%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+  }
+  
+  .form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(26, 67, 67);
+    width: 600px;
+    height: 500px;
+    box-shadow: 2px 4px 10px gray;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 15px;
+  }
+  
+  .input {
+    color: rgb(67, 70, 70);
+    padding: 10px 10px;
+    border: 3px solid rgb(34, 33, 33);
+    font-size: 15px;
+    border-radius: 20px;
+    background-color: rgb(165, 165, 165);
+  }
+  
+  label {
+    font-size: 18px;
+    letter-spacing: 1.4px;
+  }
+  
+  .tablemargin {
+    background-color: rgb(82, 89, 89);
+    margin-top: 2px;
+  }
+  
+  .btn {
+    background-color: rgb(102, 180, 248);
+    color: white;
+    padding: 10px 20px;
+    font-size: large;
+    font-weight: 600;
+    border-radius: 10px;
+  }
+  
+  input:invalid:focus {
+    border: 2px solid red;
+  }
+  
+  .table {
+    background-color: rgba(91, 95, 95, 0.5);
+    border: 2px solid black;
+    margin: 40px auto;
+  }
+  
+  .table {
+    border-radius: 10px;
+    border-width: 4px;
+  
+  }
+  
+  .td {
+    border-radius: 5px;
+    border-width: 2px;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .th {
+    border-radius: 5px;
+    border-width: 2px;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .subheading2 {
+    text-decoration: underline solid;
+    font-weight: bold;
+    color: azure;
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+    </style>
+
+</head>
+
+<body>
+
+    <h1 align="center" class="heading">Web-development 101 </h1>
+    <div class="actual">
+        <form class="form" id="form">
+            <h2 align="center" class="subheading"><i>Registration Form</i></h2>
+            
+            <hr style="width:76%;text-align:right;margin-left:0;color: brown">
+
+            <table class="tablemargin" cellspacing="25px">
+                <tr>
+                    <td><label for="name" class="label2">Full Name</label></td>
+                    <td>
+                        <input class="input" type="text" name="name" id="name" placeholder="Full Name" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="email" class="label2">E-mail :</label></td>
+                    <td>
+                        <input class="input" type="email" name="email" id="email" placeholder="Email" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="name" class="label2">Password :</label></td>
+                    <td>
+                        <input class="input" type="password" name="password" id="password" placeholder="Password"
+                            required />
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="dob" class="label2">Date Of Birth :</label></td>
+                    <td>
+                        <input style="width: 220px" class="input" type="date" name="dob" id="dob" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="checkbox" name="terms" id="terms" />
+                        <label for="terms" class="label2">Accepted Terms?</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button class="btn" type="submit">Submit</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <div class="entry">
+        <h2 class="subheading2"><i>Entries</i></h2>
+        <div id="tableDiv"></div>
+    </div>
+</body>
+
+</html>
